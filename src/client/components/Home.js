@@ -3,7 +3,10 @@ import React from 'react';
 const Home = () => {
   return (
     <div>
-      default ssr project home page
+      default ssr home page
+      <button onClick={() => {console.log('click on button')}}>
+        default button
+      </button>
     </div>
 
   )

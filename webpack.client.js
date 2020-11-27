@@ -1,12 +1,10 @@
 const path = require('path');
 
 module.exports = {
-  // tell webpack to build a bundle for node.js
-  target: 'node',
-  entry: './src/index.js',
+  entry: './src/client/client.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'build')
+    path: path.resolve(__dirname, 'public')
   },
   // tell webpack to run babel on every file it runs through
   module: {
