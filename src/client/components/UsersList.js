@@ -7,7 +7,6 @@ const UsersList = (props) => {
   useEffect(() => {
     props.fetchUsers()
   });
-  console.log(users);
   const renderUsers = (users) => {
     return users.map(user => {
       return <li key={user.id}>{user.name}</li>
@@ -22,6 +21,10 @@ const UsersList = (props) => {
       </ul>
     </div>
   )
+};
+
+export const loadData = (store) => {
+  return store.dispatch(fetchUsers())
 };
 
 export default connect(state => {
